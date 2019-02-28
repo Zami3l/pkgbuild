@@ -17,5 +17,5 @@ md5sums=('SKIP')
 package () {
 	install -d $pkgdir/usr/local/bin/$pkgname
 	cp $srcdir/$pkgname/python/* $pkgdir/usr/local/bin/$pkgname/$executable
-    chmod +x $pkgdir/usr/local/bin/$pkgname/$executable
+	chmod +x $pkgdir/usr/local/bin/$pkgname/$executable
 }
