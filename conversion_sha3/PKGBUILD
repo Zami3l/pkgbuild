@@ -1,6 +1,8 @@
 # Maintainer: Zamiel Himurua <31670103+Zami3l@users.noreply.github.com>
 
 name_github=Zami3l
+executable=conversion
+
 pkgname=conversion_sha3
 pkgver=1.0
 pkgrel=1
@@ -13,6 +15,7 @@ source=("git+git://github.com/$name_github/$pkgname.git")
 md5sums=('SKIP')
 
 package () {
-	install -dm755 $pkgdir/usr/bin/$pkgname
-	cp -r $srcdir/$pkgname/python/* $pkgdir/usr/local/bin/$pkgname
+	install -d $pkgdir/usr/local/bin/$pkgname
+	cp $srcdir/$pkgname/python/* $pkgdir/usr/local/bin/$pkgname/$executable
+    chmod +x $pkgdir/usr/local/bin/$pkgname/$executable
 }
