@@ -10,7 +10,7 @@ pkgdesc="Script python de conversion"
 arch=(any)
 url="https://github.com/$name_github/$pkgname"
 license=(unknow)
-depends=('python3')
+depends=(python3 xclip)
 source=("git+git://github.com/$name_github/$pkgname.git")
 md5sums=('SKIP')
 
