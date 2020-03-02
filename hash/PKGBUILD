@@ -1,0 +1,24 @@
+# Maintainer: Zamiel Himurua <31670103+Zami3l@users.noreply.github.com>
+
+name_github=Zami3l
+executable=sha
+
+pkgname=hash
+pkgver=1.1
+pkgrel=1
+pkgdesc="Hash de type SHA3"
+arch=(any)
+url="https://github.com/$name_github/$pkgname"
+license=(unknow)
+depends=(python3 xclip)
+source=("git+git://github.com/$name_github/$pkgname.git"
+		"exec.py")
+md5sums=('SKIP'
+		 'SKIP')
+
+package () {
+	install -d $pkgdir/usr/local/bin/$pkgname
+	cp $srcdir/$pkgname/sha3/* $pkgdir/usr/local/bin/$pkgname
+	cp $srcdir/exec.py $pkgdir/usr/local/bin/$executable
+	chmod +x $pkgdir/usr/local/bin/$executable
+}
