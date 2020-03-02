@@ -11,10 +11,8 @@ arch=(any)
 url="https://github.com/$name_github/$pkgname"
 license=(unknow)
 depends=(python3 xclip)
-source=("git+git://github.com/$name_github/$pkgname.git"
-		"exec.py")
-md5sums=('SKIP'
-		 'SKIP')
+source=("git+git://github.com/$name_github/$pkgname.git" "exec.py")
+md5sums=('SKIP' 'c423b28e3180f5e814378b898443737b')
 
 package () {
 	install -d $pkgdir/usr/local/bin/$pkgname
